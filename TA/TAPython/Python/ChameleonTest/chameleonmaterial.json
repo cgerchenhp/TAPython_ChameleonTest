@@ -1,0 +1,113 @@
+{
+	"TabLabel": "Chameleon Material Test",
+	"InitTabSize": [400, 250],
+	"InitTabPosition": [200, 200],
+    "InitPyCmd": "import ChameleonTest, importlib; importlib.reload(ChameleonTest); chameleon_material_test = ChameleonTest.chameleonmaterial.ChameleonMaterial(%JsonPath)",
+    "Root": {
+        "SBorder": {
+            "BorderBackgroundColor": [1, 1, 1, 1],
+            "BorderImage": {
+                "Style": "FCoreStyle",
+                "Brush": "ToolPanel.GroupBorder"
+            },
+
+            "Content":{
+                "SVerticalBox":
+                {
+                    "Slots": [
+                        {
+                            "AutoHeight": true,
+                            "SHorizontalBox":
+                            {
+                                "Slots": [
+                                    {
+                                        "SButton": {
+                                            "Text": "Create Material",
+                                            "ContentPadding": 4,
+                                            "OnClick": "chameleon_material_test.on_button_CreateMaterial_click()"
+                                        }
+                                    },
+                                    {
+                                        "SButton": {
+                                            "Text": "Create MF",
+                                            "ContentPadding": 4,
+                                            "OnClick": "chameleon_material_test.on_button_CreateMF_click()"
+                                        }
+                                    },
+                                    {
+                                        "SButton": {
+                                            "Text": "Material And MF",
+                                            "ContentPadding": 4,
+                                            "OnClick": "chameleon_material_test.on_button_CreateMaterialWithMF_click()"
+                                        }
+                                    },
+                                    {
+                                        "AutoWidth": true,
+                                        "SButton": {
+                                            "Text": "Del",
+                                            "OnClick": "chameleon_material_test.on_button_Del_click()"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "AutoHeight": true,
+                            "SHorizontalBox":
+                            {
+                                "Slots": [
+                                    {
+                                        "SButton": {
+                                            "Text": "Log Mat/MF",
+                                            "ContentPadding": 4,
+                                            "OnClick": "chameleon_material_test.on_button_logMatMf_click()"
+                                        }
+                                    },
+                                    {
+                                        "SButton": {
+                                            "Text": "Layout Selected Nodes",
+                                            "ContentPadding": 4,
+                                            "OnClick": "chameleon_material_test.on_button_LayoutNodes_click()"
+                                        }
+                                    },
+                                    {
+                                        "SButton": {
+                                            "Text": "Get Source Button",
+                                            "OnClick": "chameleon_material_test.on_button_GetMatSource_click()"
+                                        }
+
+
+                                    }
+
+                                ]
+                            }
+                        },
+                        {
+                            "AutoHeight": true,
+                            "SHorizontalBox":
+                            {
+                                "Slots": [
+                                    {
+                                        "SButton":
+                                        {
+                                            "Text": "Recreate By Content",
+                                            "ContentPadding":  4,
+                                            "OnClick": "chameleon_material_test.on_button_RecreateByContent_click()"
+                                        }
+                                    },
+                                    {
+                                        "SButton": {
+                                            "Text": "Recreate seleced",
+                                            "ContentPadding": 4,
+                                            "OnClick": "chameleon_material_test.on_button_RecreateSelected_click()"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

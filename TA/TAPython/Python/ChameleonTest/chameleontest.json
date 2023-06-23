@@ -1,0 +1,80 @@
+{
+	"TabLabel": "Chameleon Test",
+	"InitTabSize": [400, 250],
+	"InitTabPosition": [200, 100],
+    "InitPyCmd": "import ChameleonTest, importlib; importlib.reload(ChameleonTest); chameleon_test = ChameleonTest.chameleontest.ChameleonTest(%JsonPath)",
+    "Root": {
+        "SBorder": {
+            "BorderImage": {
+                "Style": "FEditorStyle",
+                "Brush": "ToolPanel.DarkGroupBorder"
+            },
+            "Content":{
+                "SVerticalBox":
+                {
+                    "Slots": [
+                        {
+                            "AutoHeight": true,
+                            "SHorizontalBox":
+                            {
+                                "Slots": [
+                                    {
+                                        "AutoWidth": true,
+                                        "SImage": {
+                                            "Aka": "imageInUI",
+                                            "DesiredSizeOverride": [128, 128]
+                                        }
+                                    },
+                                    {
+                                        "SButton": {
+                                            "Text": "Set Rt RawData",
+                                            "OnClick": ""
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "SHorizontalBox": 
+                            {
+                                "Slots": [
+                                    {
+                                        "SButton":
+                                        {
+                                            "Text": "Fill Slate",
+                                            "HAlign": "Center",
+                                            "VAlign": "Center",
+                                            "ContentPadding": 4,
+                                            "OnClick": "chameleon_test.on_button_FillSlate_click()"
+                                        }
+                                    },
+                                    {
+
+                                        "SButton":
+                                        {
+                                            "Text": "Fill Slate",
+                                            "HAlign": "Center",
+                                            "VAlign": "Center",
+                                            "ContentPadding": 4,
+                                            "OnClick": "chameleon_test.on_button_fillRt_click()"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "SEditableText":
+                            {
+                                "IsReadOnly": true,
+                                "Aka": "OutputText",
+                                "Justification": "Left",
+                                "Text": "Some readonly text."
+                            }
+                        }
+                    ]
+                }
+
+            }
+        }       
+    }
+}

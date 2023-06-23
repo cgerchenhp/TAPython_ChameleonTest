@@ -1,0 +1,81 @@
+{
+	"TabLabel": "SImage Painter",
+	"InitTabSize": [300, 350],
+	"InitTabPosition": [200, 100],
+    "InitPyCmd": "import ChameleonTest, importlib; importlib.reload(ChameleonTest); chameleon_simage_painter = ChameleonTest.chameleonsimagepainter.ImagePainter(%JsonPath)",
+    "Root": {
+        "SBorder": {
+            "BorderImage": {
+                "Style": "FEditorStyle",
+                "Brush": "ToolPanel.DarkGroupBorder"
+            },
+            "Content":{
+                "SVerticalBox":
+                {
+
+                    "Slots": [
+                        {
+                            "AutoWidth": true,
+                            "SHorizontalBox":
+                            {
+                                "Slots": [
+                                    {
+                                        "SOverlay": {
+                                            "Slots":
+                                            [
+                                                {
+                                                    "Padding": 80,
+                                                    "SImage": {
+                                                        "Aka": "AImage",
+                                                        "ImagePathInPlugin": "Resources/PythonIcon_128x.png"
+                                                    }
+                                                },
+                                                {
+                                                     "SImage": {
+                                                        "DesiredSizeOverride": [200, 200],
+                                                        "Aka": "ImageCanvas",
+                                                        "OnTick": "chameleon_simage_painter.on_tick()",
+                                                        "OnMouseLeave": "chameleon_simage_painter.on_mouse_leave(%mouse_flags)",
+                                                        "OnMouseMove": "chameleon_simage_painter.on_mouse_move(%uv, %mouse_flags)"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "AutoHeight": true,
+                            "SHorizontalBox": {
+                                "Slots": [
+                                    {
+
+                                        "SEditableText": {
+                                            "Aka": "Output",
+                                            "Text": "Some Text",
+                                            "IsReadOnly": true
+                                        }
+                                    },
+                                    {
+                                        "AutoWidth": true,
+                                        "SButton":
+                                        {
+                                            "Text": "Reset",
+                                            "HAlign": "Center",
+                                            "VAlign": "Center",
+                                            "ContentPadding": 4,
+                                            "ToolTipText": "",
+                                            "OnClick": "chameleon_simage_painter.reset()"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+
+            }
+        }
+    }
+}
